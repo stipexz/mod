@@ -67,6 +67,7 @@ public class Mod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ERENIUM);
+            event.accept(ModItems.RAW_ERENIUM);
         }
     }
 

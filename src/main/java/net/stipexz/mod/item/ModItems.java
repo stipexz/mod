@@ -9,9 +9,14 @@ import net.stipexz.mod.Mod;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mod.MODID);
 
-    public static final DeferredItem<Item> ERENIUM = ITEMS.register("erenium",
-            () -> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> ERENIUM = ITEMS.registerSimpleItem(
+            "erenium",
+            new Item.Properties() // The properties to use.
+    );
+    public static final DeferredItem<Item> RAW_ERENIUM = ITEMS.registerSimpleItem(
+            "raw_erenium",
+            new Item.Properties() // The properties to use.
+    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
